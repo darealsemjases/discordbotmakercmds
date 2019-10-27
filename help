@@ -1,0 +1,190 @@
+{
+  "name": "gvcreate",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "YnPTK",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "what do you want to giveaway?",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content.length > 0 && author.id === '${member.id}'",
+      "max": "1",
+      "time": "60000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "6",
+      "storage": "1",
+      "varName2": "title",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "in how much time should we draw the winner? [In Seconds]",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content.length > 0 && author.id === '${member.id}'",
+      "max": "1",
+      "time": "60000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "6",
+      "storage": "1",
+      "varName2": "time.left.u",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"channel\")}",
+      "storage": "1",
+      "varName": "channel.id",
+      "name": "Find Channel"
+    },
+    {
+      "time": "${tempVars(\"time.left.u\")}",
+      "storage": "1",
+      "varName": "time.left.2",
+      "name": "Convert Seconds To D/H/M/S"
+    },
+    {
+      "channel": "0",
+      "varName": "channel.id",
+      "message": "🎉 **Giveaway** 🎉\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "0",
+      "varName": "channel.id",
+      "message": "      **${tempVars(\"title\")}**\nReact with ✅ to enter!\nTime remaining: ${tempVars(\"time.left.2\")}",
+      "storage": "1",
+      "varName2": "embed.gv",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed.gv",
+      "emoji": "4",
+      "varName2": "✅",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "FirstNumber": "${tempVars(\"time.left.u\")}",
+      "info": "1",
+      "SecondNumber": "1",
+      "storage": "1",
+      "varName": "time.left.u",
+      "name": "Basic Math Operation"
+    },
+    {
+      "time": "${tempVars(\"time.left.u\")}",
+      "storage": "1",
+      "varName": "time.left",
+      "name": "Convert Seconds To D/H/M/S"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "embed.gv",
+      "message": "      **${tempVars(\"title\")}**\nReact with ✅ to enter!\nTime remaining: ${tempVars(\"time.left.2\")}",
+      "name": "Edit Message"
+    },
+    {
+      "FirstNumber": "${tempVars(\"time.left.u\")}",
+      "info": "1",
+      "SecondNumber": "1",
+      "storage": "1",
+      "varName": "time.left.u",
+      "name": "Basic Math Operation"
+    },
+    {
+      "time": "${tempVars(\"time.left.u\")}",
+      "storage": "1",
+      "varName": "time.left.2",
+      "name": "Convert Seconds To D/H/M/S"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "embed.gv",
+      "message": "      **${tempVars(\"title\")}**\nReact with ✅ to enter!\nTime remaining: ${tempVars(\"time.left.2\")}",
+      "name": "Edit Message"
+    },
+    {
+      "storage": "1",
+      "varName": "time.left.2",
+      "comparison": "1",
+      "value": "0d 0h 0m 0s",
+      "iftrue": "2",
+      "iftrueVal": "21",
+      "iffalse": "2",
+      "iffalseVal": "16",
+      "name": "Check Variable"
+    },
+    {
+      "message": "1",
+      "varName": "embed.gv",
+      "info": "0",
+      "find": "c6b26ba81f44b0c43697852e1e1d1420",
+      "storage": "1",
+      "varName2": "emoji",
+      "name": "Find Reaction"
+    },
+    {
+      "reaction": "1",
+      "varName": "emoji",
+      "info": "6",
+      "storage": "1",
+      "varName2": "winner",
+      "name": "Store Reaction Info"
+    },
+    {
+      "storage": "1",
+      "varName": "embed.gv",
+      "message": "      **${tempVars(\"title\")}**\n**Giveaway is over**\n**Winer is** ${tempVars(\"winner\")}",
+      "name": "Edit Message"
+    }
+  ],
+  "comType": "0"
+}
