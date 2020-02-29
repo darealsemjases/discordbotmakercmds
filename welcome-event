@@ -1,0 +1,182 @@
+{
+  "name": "Welcome",
+  "permissions": "KICK_MEMBERS",
+  "restriction": "1",
+  "actions": [
+    {
+      "member": "2",
+      "varName": "memberjoined",
+      "info": "22",
+      "storage": "1",
+      "varName2": "memberfullusername",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "memberjoined",
+      "info": "16",
+      "storage": "1",
+      "varName2": "memberavatarurl",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "memberjoined",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memberid",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "memberjoined",
+      "info": "18",
+      "storage": "1",
+      "varName2": "memberserverjoindate",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "memberjoined",
+      "info": "11",
+      "storage": "1",
+      "varName2": "membermuted",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "memberjoined",
+      "info": "21",
+      "storage": "1",
+      "varName2": "memberaccountcreationdate",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "memberjoined",
+      "info": "15",
+      "storage": "1",
+      "varName2": "memberstatus",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "memberjoined",
+      "info": "14",
+      "storage": "1",
+      "varName2": "membergame",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "memberjoined",
+      "info": "3",
+      "storage": "1",
+      "varName2": "membernickname",
+      "name": "Store Member Info"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "bannedmsgschannel",
+      "name": "Delete Message"
+    },
+    {
+      "info": "0",
+      "find": "676122933474754583",
+      "storage": "1",
+      "varName": "moglogchanshit",
+      "name": "Find Channel"
+    },
+    {
+      "title": "User Joined The Server",
+      "author": "${tempVars(\"memberfullusername\")}",
+      "color": "#36393f",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "${tempVars(\"memberavatarurl\")}",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"memberavatarurl\")}",
+      "storage": "1",
+      "varName": "bannedembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "bannedembed",
+      "fieldName": "User",
+      "message": "${tempVars(\"memberfullusername\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bannedembed",
+      "fieldName": "Nickname",
+      "message": "${tempVars(\"membernickname\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bannedembed",
+      "fieldName": "Registered",
+      "message": "${tempVars(\"memberaccountcreationdate\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bannedembed",
+      "fieldName": "Server Join Date",
+      "message": "${tempVars(\"memberserverjoindate\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bannedembed",
+      "fieldName": "Status",
+      "message": "${tempVars(\"memberstatus\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bannedembed",
+      "fieldName": "Game",
+      "message": "${tempVars(\"membergame\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bannedembed",
+      "fieldName": "is member muted",
+      "message": "${tempVars(\"membermuted\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bannedembed",
+      "message": "User ID • ${tempVars(\"memberid\")} •",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "bannedembed",
+      "channel": "5",
+      "varName2": "moglogchanshit",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "kpInX",
+  "event-type": "0",
+  "temp": "memberjoined"
+}
