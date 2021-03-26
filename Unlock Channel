@@ -8,7 +8,7 @@
     {
       "member": "1",
       "varName": "",
-      "info": "22",
+      "info": "2",
       "storage": "1",
       "varName2": "executor",
       "name": "Store Member Info"
@@ -131,14 +131,18 @@
       "name": "Send Embed Message"
     },
     {
+      "code": "msg.channel.updateOverwrite(msg.channel.guild.roles.everyone, { SEND_MESSAGES: true });",
+      "behavior": "0",
+      "interpretation": "1",
       "storage": "0",
       "varName": "",
-      "permission": "SEND_MESSAGES",
-      "state": "0",
-      "name": "Set Channel Permissions"
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
     },
     {
       "name": "End Action Sequence"
     }
-  ]
+  ],
+  "comType": "0"
 }
