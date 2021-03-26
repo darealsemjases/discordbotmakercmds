@@ -1,0 +1,74 @@
+{
+  "name": "nuke",
+  "permissions": "MANAGE_MESSAGES",
+  "restriction": "1",
+  "_id": "tTyQY",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "Name",
+      "categoryID": "${tempVars(\"categoryid\")}",
+      "position": "${tempVars(\"chanelpos\")}",
+      "permission": "1",
+      "info": "0",
+      "topic": "1",
+      "slowmode": "1",
+      "nsfw": "1",
+      "bitrate": "0",
+      "userLimit": "0",
+      "storage2": "1",
+      "varName2": "newchannel",
+      "name": "Clone Channel MOD"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "chanelpos",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "10",
+      "storage": "1",
+      "varName2": "categoryid",
+      "name": "Store Channel Info"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Channel"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "3",
+      "varName": "newchannel",
+      "channelType": "0",
+      "toChange": "2",
+      "newState": "${tempVars(\"chanelpos\")}",
+      "name": "Edit Channel"
+    },
+    {
+      "channel": "5",
+      "varName": "newchannel",
+      "message": "**${tempVars(\"newchannel\")} Has been nuked.**\nhttps://tenor.com/bgOFe.gif",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
